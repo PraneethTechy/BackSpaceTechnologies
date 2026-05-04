@@ -1,9 +1,21 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Clients from './components/Clients';
+import Technologies from './components/Technologies';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-black">
-      <h1 className="text-4xl font-bold text-green-400">
-        Tailwind v4 + React 🔥
-      </h1>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        <Clients />
+        <Technologies />
+        <ContactForm />
+      </main>
+      <Footer />
     </div>
   );
 }
