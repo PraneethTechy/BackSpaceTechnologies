@@ -1,83 +1,72 @@
-import ContactImage from '../assets/Contact.png';
+import React from 'react';
 
 export default function ContactForm() {
   return (
-    <section id="contact" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
-        
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-3">
-            Get In Touch
-          </h2>
-          <h3 className="text-4xl md:text-5xl font-black text-black">
-            Contact Us for Internship or Projects
-          </h3>
-          <div className="w-24 h-1.5 bg-black mx-auto mt-6 rounded-full"></div>
-        </div>
+    <section id="contact" className="relative pt-24 pb-32 bg-white overflow-hidden">
+      
+      {/* Decorative Dots Pattern - Left */}
+      <div className="absolute top-32 left-10 md:left-[10%] w-32 h-32 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #1d4ed8 2px, transparent 2px)', backgroundSize: '16px 16px' }}></div>
+      
+      {/* Decorative Dots Pattern - Right */}
+      <div className="absolute bottom-10 right-10 md:right-[20%] w-64 h-32 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #1d4ed8 4px, transparent 4px)', backgroundSize: '24px 24px' }}></div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           
-          {/* Left Side: Contact Form */}
-          <div className="bg-white p-8 md:p-12 rounded-3xl border-2 border-gray-100 shadow-xl shadow-blue-50/50">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-bold text-black mb-2">Name</label>
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-xl focus:border-blue-600 focus:bg-white outline-hidden transition-all"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-bold text-black mb-2">Email Address</label>
-                <input 
-                  type="email" 
-                  placeholder="Email@example.com" 
-                  className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-xl focus:border-blue-600 focus:bg-white outline-hidden transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-black mb-2">Phone Number</label>
-                <input 
-                  type="tel" 
-                  placeholder="+91 00000 00000" 
-                  className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-xl focus:border-blue-600 focus:bg-white outline-hidden transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-black mb-2">Message</label>
-                <textarea 
-                  rows="4" 
-                  placeholder="Tell us about your project or internship interest..." 
-                  className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-xl focus:border-blue-600 focus:bg-white outline-hidden transition-all resize-none"
-                ></textarea>
-              </div>
-
-              <button className="w-full py-4 bg-blue-600 text-white font-black text-lg rounded-xl hover:bg-black transition-colors duration-300 shadow-lg shadow-blue-200">
-                Send Request
-              </button>
-            </form>
+          {/* Left Side Content */}
+          <div className="max-w-md">
+            <h2 className="text-[2.5rem] md:text-[3.5rem] font-medium text-gray-900 leading-tight mb-6 tracking-tight">
+              Contact us
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed">
+              Need to get in touch with us? Either fill out the form with your inquiry or find the <a href="#" className="text-blue-600 underline hover:text-blue-800 transition-colors">department email</a> you'd like to contact below.
+            </p>
           </div>
 
-          {/* Right Side: Image/Illustration */}
-          <div className="relative group">
-            {/* Decorative Blue Glow */}
-            <div className="absolute -inset-4 bg-blue-600/10 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
-            
-            <img 
-              src={ContactImage} // Replace with your actual asset path
-              alt="Connect with Backspace Solutions"
-              className="relative z-10 w-full h-auto drop-shadow-2xl rounded-2xl transform group-hover:scale-105 transition-transform duration-500"
-            />
-            
-            {/* Quick Info Box */}
-            <div className="absolute -bottom-6 -right-6 z-20 bg-black text-white p-6 rounded-2xl shadow-2xl hidden lg:block">
-              <p className="text-blue-400 font-bold text-xs uppercase mb-1">Response Time</p>
-              <p className="font-bold">Within 24 Hours</p>
+          {/* Right Side Form Card */}
+          <div className="relative">
+            <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 p-8 md:p-10 z-10 relative">
+              <form className="space-y-5">
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-800 mb-1.5">First name*</label>
+                    <input 
+                      type="text" 
+                      className="w-full px-4 py-3 bg-[#F4F5F7] border border-transparent rounded-md focus:border-blue-600 focus:bg-white focus:ring-1 focus:ring-blue-600 outline-none transition-all text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-800 mb-1.5">Last name</label>
+                    <input 
+                      type="text" 
+                      className="w-full px-4 py-3 bg-[#F4F5F7] border border-transparent rounded-md focus:border-blue-600 focus:bg-white focus:ring-1 focus:ring-blue-600 outline-none transition-all text-sm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[13px] font-semibold text-gray-800 mb-1.5">Email*</label>
+                  <input 
+                    type="email" 
+                    className="w-full px-4 py-3 bg-[#F4F5F7] border border-transparent rounded-md focus:border-blue-600 focus:bg-white focus:ring-1 focus:ring-blue-600 outline-none transition-all text-sm"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[13px] font-semibold text-gray-800 mb-1.5">What can we help you with?</label>
+                  <textarea 
+                    rows="4" 
+                    className="w-full px-4 py-3 bg-[#F4F5F7] border border-transparent rounded-md focus:border-blue-600 focus:bg-white focus:ring-1 focus:ring-blue-600 outline-none transition-all resize-none text-sm"
+                  ></textarea>
+                </div>
+
+                <div className="pt-2">
+                  <button className="px-8 py-3 bg-blue-700 text-white text-[15px] font-medium rounded-md hover:bg-blue-800 transition-colors shadow-sm cursor-pointer">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
